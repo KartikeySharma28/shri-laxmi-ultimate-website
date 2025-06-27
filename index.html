@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shri Laxmi Tent & Events</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Dark Mode Toggle -->
+  <button id="darkToggle" class="toggle-btn">🌓</button>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <img src="mlogo.png" alt="Shri Laxmi Logo" class="logo" />
+        <h1>Shri Laxmi Tent & Events</h1>
+        <p>Jaipur's Trusted Event & Wedding Planner</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Services Section -->
+  <section class="section" id="services">
+    <h2>Our Services</h2>
+    <div class="services-grid">
+      <div class="service-card">🎉 All Type Decoration</div>
+      <div class="service-card">💍 Ring Ceremony</div>
+      <div class="service-card">🌈 Theme Based Events</div>
+      <div class="service-card">🔊 Sound & Lighting</div>
+      <div class="service-card">💃 Ladies Sangeet</div>
+      <div class="service-card">📷 Photography & Video</div>
+      <div class="service-card">🎤 Orchestra Party</div>
+      <div class="service-card">🧑‍🎤 Artist Management</div>
+      <div class="service-card">🎧 DJ & Live Band</div>
+      <div class="service-card">🕺 Choreography</div>
+      <div class="service-card">👰‍♀️ Bride & Groom Entry</div>
+      <div class="service-card">🌼 Mehndi / Haldi</div>
+      <div class="service-card">🛡️ Bouncer</div>
+      <div class="service-card">🍽️ Girls / Boys Catering</div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="section" id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <img src="images/gallery1.jpg" alt="Gallery 1" />
+      <img src="images/gallery2.jpg" alt="Gallery 2" />
+      <img src="images/gallery3.jpg" alt="Gallery 3" />
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section" id="contact">
+    <h2>Contact Us</h2>
+    <p><strong>Vikas Saini</strong></p>
+    <p>📞 <a href="tel:+919950939122">+91 99509 39122</a></p>
+    <p>📧 <a href="mailto:vikasghatawal1995@gmail.com">vikasghatawal1995@gmail.com</a></p>
+    <p>🏠 Rameshwar Dham Colony, Murlipura, Jaipur - 302039</p>
+  </section>
+
+  <!-- Floating Buttons --> 
+
+this is my index 
+and 
+  <div class="floating-buttons">
+    <a href="tel:+919950939122" class="btn call">📞 Call</a>
+    <a href="https://wa.me/919950939122" class="btn whatsapp" target="_blank">💬 WhatsApp</a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Shri Laxmi Tent & Events, Jaipur</p>
+  </footer>
+
+  <!-- Script -->
+  <script>
+    document.getElementById('darkToggle').onclick = () => {
+      document.body.classList.toggle('dark-mode');
+    };
+
+    // Scroll animation
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    });
+
+    document.querySelectorAll('.service-card, .gallery img').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
